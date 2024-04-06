@@ -89,7 +89,7 @@ export default {
 
     watch: {
         steps : {
-            handler(newVal, oldVal) {
+            handler(newVal) {
                 this.$store.commit('setNewRecipe', { steps: newVal });
             }, 
             deep : true

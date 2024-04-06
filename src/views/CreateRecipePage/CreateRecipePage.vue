@@ -14,7 +14,12 @@
             <SideNavBar @navigate="navigate"></SideNavBar>
             <div class="leftFormContainer">
                 <component :is="activeFormComponent"></component>
-                <button :disabled="!overAllValidation" class="createButton" @click="createNewRecipe">Create</button>
+                <button :disabled="!overAllValidation" class="createButton" @click="createNewRecipe">
+                    <template v-if="!createLoading">
+                        Create
+                    </template>
+                    <div class="createLoader" v-else></div>
+                </button>
             </div>
         </div>
     </div>

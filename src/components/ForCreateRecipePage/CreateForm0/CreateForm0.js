@@ -27,7 +27,7 @@ export default {
         setImage (e) {
             this.image = e.target.files[0];
             this.$store.commit('setNewRecipe', {image: this.image});
-            console.log(this.$store.getters.getNewRecipe);
+            
         }
     }, 
 
