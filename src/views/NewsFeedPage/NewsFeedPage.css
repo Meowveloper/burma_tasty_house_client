@@ -1,0 +1,28 @@
+.testing {
+    position: static;
+}
+
+
+
+.goToCreateRecipe {
+    padding: 20px 10px;
+}
+
+.goToCreateRecipe button {
+    padding: 10px 20px;
+    /* transform: translateX(-20%); */
+    border: 3px solid #CEEDC3;
+    background: none;
+    transition: all 0.3s ease-in-out;
+    font-size: 1.1em;
+}
+.goToCreateRecipe button:hover {
+    background-color: #CEEDC3;
+    border: 3px solid white;
+}
+
+.contentContainer h4 {
+    text-align: start;
+    padding: 0px 5px;
+}
+

@@ -1,0 +1,67 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lekton&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+
+.title {
+    font-family: Lekton;
+    font-weight: bold;
+}
+
+.formContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputGroup {
+    background-color: #CEEDC3;
+    width: 40%;
+    padding: 20px 40px;
+    border-radius: 20px;
+}
+
+.inputGroup>p {
+    text-align: start;
+    font-family: Lora;
+    font-weight: bold;
+    font-size: calc(100vw * (1.531 / 100));
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+
+.inputGroup>input, 
+.inputGroup>select {
+    background-color: #DFF6D8;
+    border: none;
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.inputGroup>input::placeholder {
+    font-size: calc(100vw * (1.031 / 100));
+    text-align: center;
+    color: grey;
+}
+
+.inputGroup>input[type="file"]::file-selector-button{
+    border: none;
+    outline: none;
+    background: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.inputGroup>input[type="file"]::file-selector-button:hover {
+    background-color: #CEEDC3;
+}
+
+.inputGroup>strong {
+    color: red;
+    margin-top: 20px;
+    display: block;
+}

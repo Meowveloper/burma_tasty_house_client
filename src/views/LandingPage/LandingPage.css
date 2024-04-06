@@ -1,0 +1,214 @@
+.backgroundContainer {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: -100;
+    background-color: white;
+    overflow: hidden;
+}
+
+.backgroundContainer>div{
+    width: 50%;
+    height: 100%;
+}
+
+.backgroundContainer>div:first-child {
+    background-color: white;
+}
+
+.backgroundContainer>div:last-child {
+    position: absolute;
+    top: 0;
+    right: -30%;
+    width: 70%;
+    background-color: #CFEEC4;
+    transform: skewX(-30deg);
+    
+}
+
+.contentContainer {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+
+    
+}
+
+/* .contentContainer>.B {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    background-color: #3D8B22;
+    color: white;
+    font-weight: bold;
+    font-size: 47px;
+    line-height: 100px;
+    text-align: center;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+
+    @media screen and (max-width:1280px) {
+        top: 2%;
+        left: 2%;
+    }
+   
+} */
+
+.contentContainer>.textContainer {
+    
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    height: fit-content;
+}
+
+.contentContainer>.textContainer>p:first-child {
+    font-size: 90px;
+    text-align: left;
+   
+}
+
+.contentContainer>.textContainer>p:nth-child(2) {
+    
+    margin-top: -50px;
+}
+
+.contentContainer>.textContainer>button {
+    max-width: 200px;
+    background-color: #3D8B22;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 40px;
+    color: white;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.contentContainer>.textContainer>button:hover {
+    background-color: #96ee78;
+    color: grey;
+}
+
+.contentContainer>.imgContainer>img {
+    border-radius: 180px;
+    width: 450px;
+    height: 656px;
+}
+@media screen and (max-width:430px) {
+    .contentContainer>.imgContainer>img {
+        width: 187px;
+        height: 281px;
+        margin-top: -50%;
+        margin-right: 20px
+    }
+
+    .contentContainer>.textContainer>p:nth-child(2) {
+        margin-top: 0px;
+        font-size: 15px;
+    }
+
+    .contentContainer>.textContainer>p:first-child {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .contentContainer>.textContainer {
+        gap: 2rem;
+    }
+
+    .contentContainer>.B {
+        top: 20%;
+        width: 85px;
+        height: 85px;
+        line-height: 85px;
+    }
+
+    .contentContainer {
+        gap: 0rem;
+        width: 100%;
+        max-width: 375px;
+        padding: 5px;
+        transform: translateY(-10%);
+    }
+
+    .backgroundContainer>div:last-child {
+        transform: skewY(-20deg);
+        width: 100%;
+        right: 0px;
+        height: 70%;
+        top: -25%;
+    }
+
+    .contentContainer>.textContainer>button {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .backgroundContainer {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+    }
+    .contentContainer>.imgContainer>img {
+        width: 187px;
+        height: 281px;
+        margin-top: -50%;
+        margin-right: 20px
+    }
+
+    .contentContainer>.textContainer>p:nth-child(2) {
+        margin-top: 0px;
+        font-size: 15px;
+    }
+
+    .contentContainer>.textContainer>p:first-child {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .contentContainer>.textContainer {
+        gap: 2rem;
+    }
+
+    .contentContainer>.B {
+        top: 5%;
+        width: 85px;
+        height: 85px;
+        line-height: 85px;
+    }
+
+    .contentContainer {
+        gap: 0rem;
+        width: 100%;
+        max-width: 375px;
+        padding: 5px;
+        transform: translateY(-5%);
+    }
+
+    .backgroundContainer>div:last-child {
+        transform: skewY(-20deg);
+        width: 100%;
+        right: 0px;
+        height: 70%;
+        top: -25%;
+    }
+
+    .contentContainer>.textContainer>button {
+        font-size: 20px;
+    }
+}
+

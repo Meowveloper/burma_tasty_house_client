@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Lekton&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+.contentContainer {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+    /* background-color: black; */
+    align-items: flex-start;
+    padding: 30px 50px;
+}
+
+.theFirstH1 {
+    font-family: Lora;
+    font-size: 32px;
+    text-align: start;
+    padding: 10px 20px;
+}
+
+.leftFormContainer {
+    /* background-color: red; */
+    /* position: relative; */
+    width: 80%;
+    height: 90%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    
+}
+
+.leftFormContainer::-webkit-scrollbar { display: none; }
+
+.createButton {
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+    background-color: #23CE6B;
+    padding: 10px 40px;
+    border-radius: 20px;
+    border: none;
+    font-family: Lora;
+    font-weight: bold;
+    font-size: calc(100vw * (2 / 100));
+    transition: all 0.3s ease;
+}
+
+.createButton:disabled {
+    background-color: #BFCDE0;
+}
+
+.createButton:disabled:hover {
+    background-color: #BFCDE0;
+}
+
+.createButton:hover {
+    transform: scale(1.2, 1.2);
+}

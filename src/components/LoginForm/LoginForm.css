@@ -1,0 +1,108 @@
+.background {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: black; */
+    background-image: url('../../assets/LandingPage/Preparing Photo.jpg');
+    background: none;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.blurLayer {
+    width: 100%;
+    height: 100%;
+    z-index: 101;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+    display: grid;
+    place-items: center;
+}
+
+.loginFormContainer {
+    width: 30%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.inputGroup {
+    text-align: start;
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+
+.inputGroup>input {
+    padding: 20px 10px;
+    display: block;
+    width: 100%;
+    background-color: #CFEEC4;
+    border: none;
+    outline: none;
+    color: black;
+    border-radius: 10px;
+}
+
+.orContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.orContainer>.line {
+    height: 2px;
+    background-color: grey;
+    width: 40%;
+}
+
+.loginFormContainer>button {
+    padding: 10px 25px;
+    background-color: #3D8B22;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.loginFormContainer>button:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.bi-google {
+    font-size: 1.2em;
+    color: #CFEEC4;
+    margin-left: 2px;
+}
+
+.B {
+    background-color: #3D8B22;
+    color: white;
+    font-weight: bold;
+    font-size: 47px;
+    line-height: 70px;
+    text-align: center;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin: 0px auto;
+
+}
+
+@media screen and (max-width:430px) {
+
+    .background {
+        width: 100vw !important;
+        height: 100vh;
+    }
+    .loginFormContainer {
+        width: 90%;
+    }
+}

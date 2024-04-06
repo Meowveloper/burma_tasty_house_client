@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Lekton&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+.title {
+    font-family: Lekton;
+    font-weight: bold;
+    font-size: calc(100vw * (1.2 / 100));
+}
+
+.formContainer {
+    width: 70%;
+    margin: 0px auto;
+    background-color: #F1E4F3;
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px grey;
+}
+
+.formContainer>hr {
+    width: 70%;
+    margin-top:10px ;
+    margin-bottom: 10px;
+}
+
+.formContainer>p {
+    font-weight: bold;
+}
+
+.addedTagsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.addedTag {
+    background-color: #454545;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+.addedTag>.bi {
+    margin-left: 6px;
+    transition: all 0.3s ease-in-out;
+}
+.addedTag>.bi:hover {
+    background-color: grey;
+}
+
+.inputGroup {
+    background-color: #CEEDC3;
+    padding: 20px 40px;
+    border-radius: 20px;
+}
+
+.inputGroup>p {
+    text-align: start;
+    font-family: Mali;
+    font-weight: bold;
+    font-size: calc(100vw * (2.02 / 100));
+    margin-top: 10px;
+}
+
+.inputGroup>input {
+    display: block;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: #EDFFE8;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.formContainer>button {
+    margin-top: 20px;
+    border: none;
+    background-color: #454545;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 0px;
+}
+
+.formContainer>button:hover {
+    background-color: black;
+}
