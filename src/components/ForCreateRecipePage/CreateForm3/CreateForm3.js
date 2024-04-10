@@ -34,12 +34,12 @@ export default {
 
         deleteStep(id) {
             this.steps = [...this.steps].filter(step => step.id !== id);
-            console.log(this.steps);
+            this.newStep.sequence_number = this.steps.length + 1;
         },
 
         addNewStep() {
             this.steps.push({...this.newStep, id : this.steps.length + 1});
-            this.newStep.sequence_number = this.newStep.sequence_number + 1;
+            this.newStep.sequence_number = this.steps.length + 1;
             this.newStep.description = '';
         }, 
 
@@ -86,6 +86,8 @@ export default {
             }
             
         }, 
+
+        
     },
 
     watch: {
