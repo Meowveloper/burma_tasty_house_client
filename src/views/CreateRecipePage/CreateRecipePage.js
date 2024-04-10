@@ -42,7 +42,7 @@ export default {
             this.headerHeight = headerHeight;
         }, 
 
-        createNewRecipe() {
+        async createNewRecipe() {
             this.createLoading = true;
             const newRecipe = this.$store.getters.getNewRecipe;
             const formData = new FormData();
@@ -63,6 +63,7 @@ export default {
             }).finally(() => {
                 this.createLoading = false;
             });
+
 
         }
     }, 

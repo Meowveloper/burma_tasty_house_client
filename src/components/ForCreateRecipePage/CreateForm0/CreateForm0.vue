@@ -6,7 +6,7 @@
             <div class="inputGroup">
                 <p>Title</p>
                 <input type="text" placeholder="Enter your recipe name" v-model="title" ref="title">
-                <strong v-if="checkTitleValidation">The title should be at least 5 characters.</strong>
+                <strong v-if="!checkTitleValidation">The title should be at least 5 characters.</strong>
             </div>
             <div class="inputGroup">
                 <p>Description</p>
@@ -19,7 +19,7 @@
             <div class="inputGroup">
                 <p>Estimate Preparation Time</p>
                 <input type="number" placeholder="How long will it take to prepare" v-model="preparationTime">
-                <strong v-if="checkPreparationTimeValidation">Preparation time should be at least 5 min..</strong>
+                <strong v-if="!checkPreparationTimeValidation">Preparation time should be at least 5 min..</strong>
             </div>
             <div class="inputGroup">
                 <p>Difficulty Level</p>

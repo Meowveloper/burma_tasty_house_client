@@ -33,21 +33,21 @@ export default {
 
     computed: {
         checkTitleValidation () {
-            return this.title.length < 5
+            return this.title.length > 5
         }, 
 
         checkPreparationTimeValidation () {
             if(this.preparationTime === '') {
-                return true;
-            } else if (Number(this.preparationTime < 5)) {
-                return true;
-            } else {
                 return false;
+            } else if (Number(this.preparationTime < 5)) {
+                return false;
+            } else {
+                return true;
             }
         }, 
 
         overAllValidation () {
-            return !(this.checkTitleValidation && this.checkPreparationTimeValidation);
+            return (this.checkTitleValidation && this.checkPreparationTimeValidation);
         }
     },
 
@@ -77,10 +77,11 @@ export default {
             }
         }, 
 
-        overAllValidation(newVal) {
-            if(newVal) {
+        overAllValidation : {
+            handler(newVal) {
                 this.$store.commit('setValidateNewRecipe', { form0 : newVal });
-            }
+            }, 
+            deep : true
         }
     },
 

@@ -41,10 +41,11 @@ export default {
 
 
     watch: {
-        checkAddIngredientsValidation (newVal) {
-            if(newVal) {
+        checkAddIngredientsValidation : {
+            handler(newVal) {
                 this.$store.commit('setValidateNewRecipe', { form2: newVal });
-            }
+            }, 
+            deep : true
         }
     },
 }

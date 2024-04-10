@@ -34,6 +34,7 @@ export default {
 
         deleteStep(id) {
             this.steps = [...this.steps].filter(step => step.id !== id);
+            console.log(this.steps);
         },
 
         addNewStep() {
@@ -95,10 +96,12 @@ export default {
             deep : true
         }, 
 
-        checkValidationForAddedSteps (newVal) {
-            if(newVal) {
+        checkValidationForAddedSteps : {
+            handler(newVal) {
                 this.$store.commit('setValidateNewRecipe', { form3 : newVal });
-            }
+            }, 
+            deep : true
         }
+        
     },
 }

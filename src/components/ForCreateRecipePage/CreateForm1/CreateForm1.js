@@ -36,10 +36,11 @@ export default {
     },
 
     watch: {
-        checkAddedTagsValidation (newValue) {
-            if(newValue) {
+        checkAddedTagsValidation : {
+            handler (newValue) {
                 this.$store.commit('setValidateNewRecipe', { form1 : newValue });
-            }
+            }, 
+            deep : true
         }
     },
 }
