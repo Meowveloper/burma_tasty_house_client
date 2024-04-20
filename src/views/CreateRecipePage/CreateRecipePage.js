@@ -52,11 +52,25 @@ export default {
             formData.append('description', newRecipe.description || null);
             formData.append('preparationTime', newRecipe.preparationTime);
             formData.append('difficultyLevel', newRecipe.difficultyLevel);
-            formData.append('tags', newRecipe.tags);
-            formData.append('ingredients', newRecipe.ingredients);
-            formData.append('steps', newRecipe.steps);
+            newRecipe.tags.forEach(tag => {
+                formData.append("tags[]", tag);
+            });
 
-            axios.post('http://127.0.0.1:8000/api/recipe/create', formData).then((response) => {
+            newRecipe.ingredients.forEach(ingredient => {
+                formData.append("ingredients[]", ingredient);
+            });
+
+            newRecipe.steps.forEach(step => {
+                formData.append("steps[]", JSON.stringify(step));
+            });
+            // formData.append('ingredients', newRecipe.ingredients);
+            // formData.append('steps', newRecipe.steps);
+
+            axios.post('http://127.0.0.1:8000/api/recipe/create', formData, {
+                headers : {
+                    "Content-Type" : "multipart/form-data"
+                }
+            }).then((response) => {
                 console.log(response.data);
             }).catch(err => {
                 console.log(err);
